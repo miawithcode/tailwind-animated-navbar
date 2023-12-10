@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  .nav-icon-container{
+    @apply relative flex items-center justify-center;
+  }
+
+  .navbar-icon {
+    @apply h-12 w-12 mt-2 mb-2 mx-auto bg-gray-800 text-green-900 hover:bg-green-600 p-3 rounded-3xl hover:rounded-xl transition-all duration-200 ease-linear cursor-pointer;
+  }
+
+  .tooltip {
+    @apply absolute w-auto p-2 m-2 min-w-max top-1/2 transform -translate-y-[1.5rem] left-20 rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all duration-200 origin-left ease-linear opacity-0; 
+  }
+
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    margin-top: -5px;
+    
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #111827 transparent transparent;
+  }
+}
